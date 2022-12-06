@@ -7,11 +7,17 @@ This app will allow users to create their own list of Habits and mark them done 
 
 ## Feature list
 USER LOGIN
+
 NEW USER REGISTER
+
 CREATE A HABIT
+
 LIST HABITS
+
 LOG HABITS DAILY
+
 UPDATE HABIT
+
 DELETE HABIT
 
 
@@ -24,12 +30,19 @@ DELETE HABIT
 List all the APIs it's methods, request and response params
 
 1.CREATE HABIT - POST - HABIT - /create_habit
+
 2.LIST ALL HABITS - GET - HABIT - /log_habit
+
 3.MARK HABIT - POST - HABIT - /mark_habit
+
 4.DELETE HABIT - DELETE - HABIT - /habitika/<item_id>
+
 5.LIST Habit by ID - GET - HABIT - /habitika/<item_id>
+
 6.LOGIN USER
+
 7.REGISTER NEW USER
+
 8.LOGOUT
 
 
@@ -37,6 +50,7 @@ List all the APIs it's methods, request and response params
 ## DB Design Diagram
 
 > TABLE 1- HABIT
+> 
             id INTEGER PRIMARY KEY,
             Title TEXT,
             Description TEXT,
@@ -45,7 +59,11 @@ List all the APIs it's methods, request and response params
             CreatedOn Date DEFAULT CURRENT_DATE,
             DueDate Date,
             UserId INTEGER FOREIGNKEY REFERENCES User(_id)
+
+
+ 
 >  TABLE 2 - USER
+
             _id INTEGER PRIMARY KEY AUTOINCREMENT,
             Name TEXT NOT NULL,
             Email EMAIL NOT NULL,
