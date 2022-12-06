@@ -48,7 +48,7 @@ def register_page() -> 'html':
 def entry_page() -> 'html':
     if session['loginsuccess']:
         user = session['name']
-        title = 'Welcome ' + user + '! - Create your own Habit Tracker!'
+        title = 'Welcome ' + user + '! - Create your own Habit Trackerr!'
         return render_template('entry.html', the_title=title)
 
 
