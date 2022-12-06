@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/create_habit'>
+<table>
+<!--<p>Use this form to Create a Habit:</p>-->
+<tr><td>Habit Title:</td><td><input name='title' type='TEXT' width='60'></td></tr>
+<tr><td>Description:</td><td><input name='description' type='TEXT' value=''></td></tr>
+</table>
+<!--<p>When you're ready, click this button:</p>-->
+<p><input value='Create' type='SUBMIT'></p>
+    <p><input value='List Your Habits!' type='SUBMIT' formaction="/log_habit" formmethod="GET"></p>
+    <p><input value='Logout' type='SUBMIT' formaction='/logout'></p>
+</form>
+
+{% endblock %}

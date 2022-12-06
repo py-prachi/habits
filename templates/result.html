@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<h2>{{ the_title }}</h2>
+
+<p> {{ the_list }} </p>
+<form>
+<table class="table">
+    <tr class="table__header">
+        {% for header in headings %}
+        <th class="table__cell"> {{ header }}</th>
+        {% endfor %}
+    </tr>
+    {% for row in data %}
+    <tr class="table__row" id={{ row[0] }}>
+        {% for cell in row[1:] %}
+        <td class="table__cell"> {{ cell }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<p><input value='Create More / List Your Habits!' type='SUBMIT' formaction="/entry" formmethod="POST"></p>
+<p><input value='Logout' type='SUBMIT' formaction='/logout' formmethod="POST"> </p>
+</form>
+
+<script src="static/script.js"></script>
+
+
+
+
+{% endblock %}

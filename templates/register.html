@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>Welcome to Habitika - Register yourself!</h2><br>
+
+<div>
+  <form method='POST', action="/new">
+  <label>Name</label><br>
+  <input name="name" type="text" id="name"><br><br>
+    <label>Username (email)</label><br>
+  <input name="username" type="email" id="username"><br><br>
+  <label>Password</label><br>
+  <input name="password" type="password" id="password"><br><br>
+
+  <p><input value='Register New User' type='SUBMIT'></p>
+</form>
+</div>
+{% endblock %}
